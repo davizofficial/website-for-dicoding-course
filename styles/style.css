@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+}
+
+.site-header {
+    background-color: #3b3b3b;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.site-nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.site-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.site-nav ul li a:hover {
+    background-color: #494949;
+}
+
+.site-nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #494949;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.site-main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.content-section {
+    flex: 3;
+    padding: 20px;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.profile-photo {
+    width: 150px; /* Atur lebar foto profil */
+    height: 150px; /* Atur tinggi foto profil */
+    border-radius: 50%; /* Membuat foto profil berbentuk bulat */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    margin-bottom: 15px; /* Jarak antara foto dan teks */
+}
+
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transisi untuk slider */
+}
+
+.image-slider img {
+    width: 100%;
+    height: auto;
+    flex: 0 0 100%; /* Setiap gambar mengambil 100% lebar */
+    max-height: 400px; /* Atur tinggi maksimum untuk gambar */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+.projects-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .site-main {
+        flex-direction: column;
+    }
+    .content-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .project-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .site-nav ul {
+        flex-direction: column;
+    }
+    .site-nav ul li {
+        margin: 10px 0;
+    }
+    .project-item {
+        flex: 1 1 100%;
+    }
+}
